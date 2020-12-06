@@ -20,3 +20,10 @@ local gist = require "gist"
 ```
 Then You Can Start Using The Language.
 Keep In Mind, Files Programmed In Gist Will Have To end with the .gist Extension.
+
+Also, If You Mind, Put This Badge On Your Github Repository's README:
+
+[![Gist](https://img.shields.io/badge/Using-Gist-red)](https://github.com/Gordae/Gist/)
+
+This Is The MD code:
+`[![Gist](https://img.shields.io/badge/Using-Gist-red)](https://github.com/Gordae/Gist/)`
