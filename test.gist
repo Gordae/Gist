@@ -1,0 +1,9 @@
+local gist = require "gist"
+
+while (true) do
+	gist.print('Hello World!')
+	gist.consoleExec('echo this is in CMD')
+	gist.input('this is a input:')
+	gist.sleep(0.35)
+	gist.exit(0)
+end

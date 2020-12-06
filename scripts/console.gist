@@ -1,0 +1,57 @@
+require=os
+require=math
+require=time
+
+local VERSION__ = '0.1'
+local NAME__ = "Gist"
+os.execute('title ' .. NAME__ .. ' console')
+
+function startupmsg()
+	print(NAME__ .. " " .. VERSION__ .. '. Visit https://gordae.com/gist For More Info, Or type "help"')
+end
+
+function __main__()
+    while( true )
+    do
+		io.write('>>')
+        local command = io.read()
+        if (command == "help") then
+            print('======[HELP]======')
+            print('calc - Calculator!')
+			print(' help - Help Menu')
+            print(' run - Run a app')
+            print('   quit - Quit')
+        end
+
+        if (command == "calc") then
+            io.write('Value A: ')
+			local valueA = io.read()
+			io.write('+ or -: ')
+			local operator = io.read()
+			io.write('Value B: ')
+			local valueB = io.read()
+			if (operator == '+') then
+				local answer = (valueA + valueB)
+				print(answer)
+			end
+			if (operator == '-') then
+				local answer = (valueA - valueB)
+				print(answer)
+			end
+		end
+
+		if (command == "quit") then
+			os.exit()
+		end
+
+		if (command == "run") then
+			print('Please Type A Script To Run!')
+			print('Please Type the full path.')
+			io.write('>')
+			local script = io.read()
+			os.execute('lua ' .. script)
+		end
+	end
+end
+startupmsg()
+__main__()
