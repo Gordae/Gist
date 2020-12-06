@@ -13,6 +13,13 @@ Gist (Jist) Is A Programming language using Lua. It Is Using The Same Syntax Tha
 * `gist.sleep(duration)`
 * Then All Of Lua's Commands.
 
+# How To Install
+* Download The Code.
+* Download [This Framework For Lua To Work On Windows](https://github.com/rjpcomputing/luaforwindows/releases/download/v5.1.5-52/LuaForWindows_v5.1.5-52.exe)
+* Install Luaforwindows.
+* Extract Gist-main.zip.
+* Now You Should Be Able To Use Gist. Report Any Bugs In [Issues](https://github.com/Gordae/Gist/issues).
+
 # How To Use
 Put This At The Beginning Of Your Gist Code.
 ```lua
