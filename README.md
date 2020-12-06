@@ -27,6 +27,7 @@ local gist = require "gist"
 ```
 Then You Can Start Using The Language.
 Keep In Mind, Files Programmed In Gist Will Have To end with the .gist Extension.
+**AND, YOUR PROJECTS HAVE TO BE IN THE SAME FOLDER THAT GIST IS INSTALLED IN.**
 
 Also, If You Mind, Put This Badge On Your Github Repository's README:
 
