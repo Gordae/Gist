@@ -1,3 +1,7 @@
+![Gist](/logo.png)
+
+
+
 # Info
 Gist (Jist) Is A Programming language using Lua. It Is Using The Same Syntax That Lua Uses.
 
