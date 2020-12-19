@@ -1,3 +1,2 @@
 @echo off
-lua scripts\console.gist
-pause
+lua scripts\console.lua
