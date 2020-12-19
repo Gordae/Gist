@@ -9,12 +9,17 @@ Gist (Jist) Is A Programming language using Lua. It Is Using The Same Syntax Tha
 * `gist.printTimeRunning()`
 * `gist.printDate()`
 * `gist.consoleExec("command")`
-* `gist.remove("file")`
-* `gist.rename("oldname", "newname")`
 * `gist.print("msg")`
 * `gist.input("msg")`
 * `gist.exit(code)`
 * `gist.sleep(duration)`
+* `gist.implement(module)`
+* `sys.createError(msg, Error, Traceback, program, exitCode, showTraceback)`
+* `files.remove("file")`
+* `files.rename("oldname", "newname")`
+* `files.openfile(Filename, Mode)`
+* `files.closefile(Filename)`
+* `files.write(Filename, msgToWrite)`
 * Then All Of Lua's Commands.
 
 # How To Install
@@ -27,7 +32,7 @@ Gist (Jist) Is A Programming language using Lua. It Is Using The Same Syntax Tha
 # How To Use
 Put This At The Beginning Of Your Gist Code.
 ```lua
-local gist = require "gist"
+require('gist')
 ```
 Then You Can Start Using The Language.
 Keep In Mind, Files Programmed In Gist Will Have To end with the .gist Extension.
