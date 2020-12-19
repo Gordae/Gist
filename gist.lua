@@ -1,7 +1,12 @@
-gist = {}
+NAME_ = 'Gist'
+VERSION_ = (1.1)
 
-function gist.implement(moduel)
-	require(moduel)
+gist = {
+	NAME_, VERSION_
+}
+
+function gist.implement(Module)
+	require(Module)
 end
 
 gist.implement('os')
@@ -30,6 +35,7 @@ function gist.input(msgforinput)
 end
 
 function gist.exit(exitCode)
+	if(exitCode >= -2147483647) then sys.createError(exitCode .. ' Is A Overflow Number.', 'OverflowError', 'gist.exit(' .. exitCode .. ')', 'GIST', 1, true) end -- This doesnt do anything, just to let you know
 	os.exit(exitCode)
 end
 
@@ -37,14 +43,20 @@ function gist.sleep(duration)
 	local start = os.clock()
 	while os.clock() - start < duration do end
 
-	if(duration < 0) then
-		sys.createError(duration .. ' Is below 0', 'UnderflowError', 'gist.sleep(' .. duration .. ')', 'GIST', 1, true)
-		gist.exit(1)
-	end
+	if(duration < 0) then sys.createError(duration .. ' Is below 0', 'UnderflowError', 'gist.sleep(' .. duration .. ')', 'GIST', 1, true) end
 end
 
 function gist.clearScreen()
 	os.execute('cls')
+end
+
+function gist.answerMath(ValueA, Operator, ValueB)
+	if(Operator == '+') then mathAnswer = (ValueA + ValueB) end
+	if(Operator == '-') then mathAnswer = (ValueA - ValueB) end
+	if(Operator == '*') then mathAnswer = (ValueA * ValueB) end
+	if(Operator == '/') then mathAnswer = (ValueA / ValueB) end
+	if(Operator == '%') then mathAnswer = (ValueA % ValueB) end
+	if(Operator == '^') then mathAnswer = (ValueA ^ ValueB) end
 end
 
 return gist
