@@ -27,18 +27,12 @@ function __main__()
 		if (command == "calc") then
             io.write('Value A: ')
 			local valueA = io.read()
-			io.write('+ or -: ')
+			io.write('Operator: ')
 			local operator = io.read()
 			io.write('Value B: ')
 			local valueB = io.read()
-			if (operator == '+') then
-				local answer = (valueA + valueB)
-				gist.print(answer)
-			end
-			if (operator == '-') then
-				local answer = (valueA - valueB)
-				gist.print(answer)
-			end
+			gist.answerMath(valueA, operator, valueB)
+			print(mathAnswer)
 		end
 
 		if (command == "exit") then gist.exit(0) end
