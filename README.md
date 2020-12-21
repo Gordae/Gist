@@ -1,7 +1,6 @@
 ![Gist](/logo.png)
 
 
-
 # Info
 Gist (Jist) Is A Programming language using Lua. It Is Using The Same Syntax That Lua Uses.
 
@@ -43,3 +42,7 @@ Also, If You Mind, Put This Badge On Your Github Repository's README:
 
 This Is The MD code:
 `[![Gist](https://img.shields.io/badge/Using-Gist-red)](https://github.com/Gordae/Gist/)`
+
+# Credits
+
+[Gist Is Powered By Lua.](http://lua.org)
