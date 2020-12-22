@@ -1,6 +1,6 @@
 require('gist')
 
-local VERSION__ = '1.0'
+local VERSION__ = '1.2'
 local NAME__ = "Gist"
 gist.consoleExec('title ' .. NAME__ .. ' console')
 
