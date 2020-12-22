@@ -1,9 +1,8 @@
-NAME_ = 'Gist'
-VERSION_ = (1.1)
+NAME_, VERSION_ = 'Gist', (1.2)
 
-gist = {
-	NAME_, VERSION_
-}
+
+gist = {NAME_, VERSION_}
+
 
 function gist.implement(Module)
 	require(Module)
@@ -12,6 +11,8 @@ end
 gist.implement('os')
 gist.implement('modules.sys')
 gist.implement('modules.files')
+
+
 
 function gist.printTimeRunning()
 	print(os.clock())
@@ -35,7 +36,6 @@ function gist.input(msgforinput)
 end
 
 function gist.exit(exitCode)
-	if(exitCode >= -2147483647) then sys.createError(exitCode .. ' Is A Overflow Number.', 'OverflowError', 'gist.exit(' .. exitCode .. ')', 'GIST', 1, true) end -- This doesnt do anything, just to let you know
 	os.exit(exitCode)
 end
 
@@ -58,5 +58,22 @@ function gist.answerMath(ValueA, Operator, ValueB)
 	if(Operator == '%') then mathAnswer = (ValueA % ValueB) end
 	if(Operator == '^') then mathAnswer = (ValueA ^ ValueB) end
 end
+
+function gist.about()
+	print(NAME_ .. ' ' .. VERSION_ .. '. Created By Gordae And Powered By Lua.')
+end
+
+function gist.bashExec(bashCommand)
+	bashfile = io.open('temp.ps1', 'w')
+	bashfile.write(bashfile, bashCommand)
+	bashfile.close(bashfile)
+
+	execBash = io.open('temp.ps1', 'r')
+	os.execute('powershell ' .. execBash.read(execBash, '*a'))
+	execBash.close(execBash)
+	os.remove('temp.ps1')
+end
+
+
 
 return gist
