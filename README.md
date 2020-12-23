@@ -13,6 +13,8 @@ Gist (Jist) Is A Programming language using Lua. It Is Using The Same Syntax Tha
 * `gist.exit(code)`
 * `gist.sleep(duration)`
 * `gist.implement(module)`
+* `gist.about()`
+* `gist.bashExec(command)`
 * `sys.createError(msg, Error, Traceback, program, exitCode, showTraceback)`
 * `files.remove("file")`
 * `files.rename("oldname", "newname")`
